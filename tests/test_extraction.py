@@ -145,8 +145,7 @@ async def test_real_extraction():
             "third quarter ended June 29, 2024. The Company posted quarterly revenue of "
             "$85.8 billion, up 5 percent year over year, and quarterly earnings per "
             "diluted share of $1.40, up 11 percent year over year. "
-            "'We are happy to report that we had an all-time revenue record in Services '
-            'and a June quarter record for iPhone,' said Tim Cook, Apple's CEO."
+            "We are happy to report that we had an all-time revenue record in Services and a June quarter record for iPhone, said Tim Cook."
         ),
         doc_type=DocType.EARNINGS,
     )

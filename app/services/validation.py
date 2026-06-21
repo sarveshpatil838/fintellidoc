@@ -71,12 +71,7 @@ def validate_llm_output(
                 try:
                     data = json.loads(raw_output)
                 except json.JSONDecodeError as e:
-                    raise ValidationError.from_exception_data(
-                        title=schema.__name__,
-                        input_type="json",
-                        input_value=raw_output,
-                        line_errors=[]
-                    ) from e
+                    raise ValueError(f"Malformed JSON in LLM output: {e}") from e
             else:
                 data = raw_output
 

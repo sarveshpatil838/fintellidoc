@@ -22,7 +22,7 @@ class TestRAGChunking:
         import unittest.mock as mock
 
         with mock.patch("app.services.rag.SentenceTransformer"), \
-             mock.patch("app.services.rag.faiss"):
+             mock.patch("app.services.rag.chromadb"):
             service = RAGService.__new__(RAGService)
             service.embedding_dim = 384
             service.index = None
@@ -36,7 +36,7 @@ class TestRAGChunking:
         import unittest.mock as mock
 
         with mock.patch("app.services.rag.SentenceTransformer"), \
-             mock.patch("app.services.rag.faiss"):
+             mock.patch("app.services.rag.chromadb"):
             service = RAGService.__new__(RAGService)
             service.embedding_dim = 384
             service.index = None
@@ -56,7 +56,7 @@ class TestRAGChunking:
         settings = get_settings()
 
         with mock.patch("app.services.rag.SentenceTransformer"), \
-             mock.patch("app.services.rag.faiss"):
+             mock.patch("app.services.rag.chromadb"):
             service = RAGService.__new__(RAGService)
             service.embedding_dim = 384
             service.index = None
